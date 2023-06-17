@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝐐𝐑 𝐂𝐨𝐝𝐞 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐨𝐫</title>
+    <link rel="icon" href="xicon.png" type="image/x-icon">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div>
+      <!-- Title -->
+      <div class="w3-bar w3-white w3-sans-serif w3-card w3-padding w3-wide w3-margin-bottom">
+        <div style="display: inline-block;vertical-align: middle;">
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="32" width="32" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+            <g>
+              <g>
+                <g>
+                  <path d="M160,0H0v160h160V0z M128,128H32V32h96V128z" />
+                  <rect x="64" y="64" width="32" height="32" />
+                  <path d="M352,0v160h160V0H352z M480,128h-96V32h96V128z" />
+                  <rect x="416" y="64" width="32" height="32" />
+                  <path d="M0,512h160V352H0V512z M32,384h96v96H32V384z" />
+                  <rect x="64" y="416" width="32" height="32" />
+                  <rect x="256" width="64" height="32" />
+                  <polygon points="256,128 288,128 288,96 320,96 320,64 224,64 224,32 192,32 192,64 192,80 192,96 256,96 			" />
+                  <rect x="192" y="128" width="32" height="32" />
+                  <polygon points="320,160 288,160 288,192 192,192 192,224 320,224 			" />
+                  <polygon points="32,288 64,288 64,256 32,256 32,192 0,192 0,320 32,320 			" />
+                  <rect x="64" y="192" width="32" height="32" />
+                  <polygon points="192,320 256,320 256,288 224,288 224,256 160,256 160,192 128,192 128,256 96,256 96,320 128,320 128,288 
+                   144,288 160,288 192,288 			" />
+                  <rect x="288" y="256" width="32" height="64" />
+                  <polygon points="288,352 192,352 192,384 256,384 256,480 192,480 192,512 288,512 288,480 352,480 352,448 288,448 			" />
+                  <rect x="192" y="416" width="32" height="32" />
+                  <rect x="320" y="352" width="32" height="64" />
+                  <polygon points="480,416 384,416 384,512 416,512 416,448 480,448 			" />
+                  <rect x="448" y="480" width="64" height="32" />
+                  <rect x="480" y="352" width="32" height="32" />
+                  <polygon points="384,384 416,384 416,288 352,288 352,320 384,320 			" />
+                  <polygon points="448,224 416,224 416,192 384,192 384,224 352,224 352,256 480,256 480,224 512,224 512,192 448,192 			" />
+                  <rect x="448" y="288" width="64" height="32" />
+                </g>
+              </g>
+            </g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g><g></g>
+          </svg>
+        </div>
+        <h4 style="display: inline-block;user-select: none;">QR Code Generator</h4>
+      </div>
+      <!--  -->
+      <div class="w3-container">
+        <div class="w3-row">
+          <div class="w3-half w3-padding w3-container w3-light-gray w3-round w3-card">
+            <h2 class="w3-text-gray">Input</h2>
+            <label class="w3-text-gray">URL/Text</label>
+            <textarea id="text" class="w3-input w3-border  w3-round" placeholder="ᴘᴀꜱᴛᴇ ʏᴏᴜʀ ᴛʏᴘᴇ ᴏꜰ ꜱᴏᴜʀᴄᴇ " style="resize:none" spellcheck="false"></textarea>
+            <label class="w3-text-gray">Size</label>
+            <select onchange="makeCode()" class="w3-select w3-border" id="size" name="size">
+              <option value="100">100X100 px</option>
+              <option value="128">128x128 px</option>
+              <option selected value="200">200x200 px</option>
+              <option value="256">256x256 px</option>
+              <option value="300">300X300 px</option>
+              <option value="custom">Custom</option>
+            </select>
+            <div class="w3-half">
+              <label class="w3-text-gray">Width (px)</label>
+              <input oninput="makeCode()" id="width" value="150" class="w3-input w3-border" type="text" placeholder="150">
+            </div>
+            <div class="w3-half">
+              <label class="w3-text-gray">Height (px)</label>
+              <input oninput="makeCode()" id="height" value="150" class="w3-input w3-border" type="text" placeholder="150">
+            </div>
+            <span class="w3-text-gray">
+              <small>Works only when Custom size is selected</small>
+            </span>
+            <br>
+            <div class="w3-half">
+              <label class="w3-text-gray">Dot Color</label>
+              <input onchange="makeCode()" class="w3-input w3-border" id="dot_color" data-jscolor="{value:'#000000'}">
+            </div>
+            <div class="w3-half">
+              <label class="w3-text-gray">Background Color</label>
+              <input onchange="makeCode()" class="w3-input w3-border" id="bg_color" data-jscolor="{value:'#FFFFFF'}">
+            </div>
+            <button class="w3-button w3-blue w3-margin w3-round w3-right" onclick="makeCode()">Generate</button>
+          </div>
+          <div class="w3-half w3-container">
+            <h2 class="w3-text-gray">Output</h2>
+            <div id="qrcode"></div>
+            <div id="button_download_container">
+              <!-- download button will be here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="s1.js"></script>
+    <script src="s2.js"></script>
+    
+    <script src="s3.js"></script>
+    <script src="s4.js"></script>
+    <p style="padding:1rem; background-color:#efefef; text-align:center; bottom:0;">Developed By <a href="https://facebook.com/arijit105">Arijit</a>
+    </p>
+  </body>
+</html>
