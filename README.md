@@ -1,2 +1,1 @@
-# qr-code-generator
-qr-code-generator using html css and js
+live- https://arijit105.github.io/qr-code-generator/
